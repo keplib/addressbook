@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--     -->
+<html>
+    <head
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Address Book</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- FONTS  FROM GOOGLE   -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Montserrat&family=Sacramento&family=Zilla+Slab&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- ICON  FROM GOOGLE   -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+    </head>
+    <body>
+            <!-- TOP LOGO    -->
+            <navbar>
+                <ul class="navbar-list">
+                    <li class="navbar-logo">AddressBook</li>
+                </ul>
+            </navbar>
+       
+            <!-- NAVIGATION CONTAINER    -->
+            <div id="navigation-container">
+
+                <!-- NAVIGATION BAR    -->
+                <div id="navigation">
+                    <p id="nav-add-new" class="selected">ADD NEW</p>
+                    <p id="nav-search">SEARCH</p>
+                </div>
+
+                <!-- INPUT FORM    -->
+                <div id="add-contact-panel">
+                    <form action="" id="form">
+                        <label for="fName" class="fName">FIRST NAME</label>
+                        <div class="input-icons">
+                            <input type="text" name="fName" id="fName" class="text-input" placeholder="First name" required>
+                            <span class="material-symbols-outlined">check_small</span>
+                        </div>
+                        
+                        <label for="lName" class="lName">LAST NAME</label>
+                        <div class="input-icons">
+                            <input type="text" name="lName" id="lName" class="text-input" placeholder="Last name" required>
+                            <span class="material-symbols-outlined">check_small</span>
+                        </div>
+                        
+                        <label for="email" class="email">EMAIL</label>
+                        <div class="input-icons">
+                            <input type="email" name="email" id="email" class="email-input" placeholder="Email" required>
+                            <span class="material-symbols-outlined">check_small</span>
+                        </div>
+                        
+                        <label for="address" class="address">ADDRESS</label>
+                        <div class="input-icons">
+                            <input type="text" name="address" id="address" class="text-input" placeholder="Address" required>
+                            <span class="material-symbols-outlined">check_small</span>
+                        </div>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                 <!-- SEARCH  BAR    -->
+                <div class="searchBar">
+                    <label for="search">SEARCH</label>
+                    <input type="text" id="search" placeholder="Search here for contacts">
+                </div>
+            
+            </div>
+
+            
+            <!-- TABLE TO SHOW ADDRESS BOOK ENTRIES    -->
+            <div class="table-container">
+                <table class="entries-table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <!-- ADDING ONE DEFAULT CONTACT USING HTML   -->
+                        <tr>
+                            <td>John</td>
+                            <td>Miller</td>
+                            <td>jmiller@gmail.com</td>
+                            <td>125, 4th Av. New York, NYC </td>
+                            <td><span class="material-symbols-outlined delete-btn">cancel</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        <!-- ADDING JQUERY AND JS SCRIPT AT THE END SO IT ONLY LOADS ONCE CONTENT AND DOM IS LOADED   -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="index.js" async defer></script>
+        
+    </body>
+</html>
